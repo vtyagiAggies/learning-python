@@ -1,0 +1,14 @@
+#!/usr/bin/python
+import sys
+def palindrome(s):
+    result = s == s[::-1]
+    #Another more readable way to reverse ''.join(reversed(s))
+    return result
+
+
+
+#calling function
+if __name__ == "__main__":
+    print palindrome(sys.argv[1])
+
+
