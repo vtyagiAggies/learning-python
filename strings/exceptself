@@ -1,0 +1,28 @@
+#!/usr/bin/python
+def productExceptSelf(nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        result = [1]*len(nums)
+        end = len(nums) -1
+        result[end] = nums[end]
+        end -=1         
+        for i in range(end,-1,-1):
+            result[i] = result[i+1]*nums[i]
+	
+	print result	
+            
+        for i in range(1,len(nums)):
+            nums[i] = nums[i]*nums[i-1]
+	result[0] = result[1] 
+        for i in range(1,len(nums)-1):
+                result[i] = nums[i-1]*result[i+1]
+        print nums
+	print result
+        
+        result[len(nums)-1] = nums[len(nums) -2]
+        
+        print result
+
+productExceptSelf([9, 0, -2])

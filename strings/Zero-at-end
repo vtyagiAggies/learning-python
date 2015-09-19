@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+def x(arr):
+    swap = 0
+    for i in range(len(arr)):
+        if( arr[i] != 0):
+            temp = arr[i]
+            arr[i] =  0
+            arr[swap] = temp
+            swap += 1
+
+    print arr
+
+
+
+x([1,0,2,0,13])
+
