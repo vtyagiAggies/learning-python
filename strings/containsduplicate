@@ -1,0 +1,14 @@
+#!/usr/bin/python
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        book = {}
+        for i in range(0, len(nums)):
+            if(book.has_key(nums[i])):
+                return True
+            book[nums[i]] = 1
+        return False
+        
